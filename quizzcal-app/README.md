@@ -1,0 +1,1 @@
+# This is a Scrimba project, only posted as a personal exercise.

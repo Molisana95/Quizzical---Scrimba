@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/Font/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/Font/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  background-color: #F5F7FB;
+  color: #293264;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+}
+
+main > .background-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20rem;
+  height: 20rem;
+  background-image: url("./assets/Images/blob 5.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  z-index: -1;
+}
+
+main > .background-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20rem;
+  height: 20rem;
+  background-image: url("./assets/Images/blobs.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  z-index: -1;
+}
+
+main > h1 {
+  font-weight: 700;
+  font-style: bold;
+  letter-spacing: 0.15rem;
+}
+
+main > p {
+  text-align: center;
+}
+
+.main-app-container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    position: relative;
+}
+
+button {
+  width: 13rem;
+  height: 3rem;
+  padding: 0.5rem 2rem;
+  border-radius: 15px;
+  border: 1px solid #4d5b9e;
+  background-color: #4d5b9e;
+  color: #F5F7FB;
+  z-index: 3;
+}
+
+button:hover {
+  background-color: #3b4a99;
+  border-color: #3b4a99;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #2a387f;
+  border-color: #2a387f;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(80, 97, 180, 0.5);
+}
+
+.questions-container {
+
+  display: grid;
+  grid-template-rows: auto;
+  gap: 1rem;
+
+}
+
+.questions-container > h3 {
+  z-index: 3
+}
+
+.main-app-container > .background-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10rem;
+  height: 10rem;
+  background-image: url("./assets/Images/blob 5.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  z-index: 2;
+}
+
+.main-app-container > .background-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10rem;
+  height: 10rem;
+  background-image: url("./assets/Images/blobs.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  z-index: 2;
+}
+
+.question-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0;
+  padding: 1rem;
+  border-bottom: 1px solid #DBDEF0;
+
+}
+
+.question-wrapper > h2 { 
+  z-index: 3;
+}
+
+.answers-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 0.5rem;
+  border-radius: 10px;
+  background-color: #F5F7FB;
+
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d2d9fc;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.2rem 1rem;
+  transition: background-color 0.3s, border-color 0.3s;
+  z-index: 3;
+}
+
+.radio-label:hover {
+  background-color: #d2d9fc;
+}
+
+.radio-label:has(.radio-input:checked) {
+  background-color: #D6DBF5;
+  border-color: #1c3ddf;
+}
+
+.radio-label:active {
+  background-color: #8b9eff;
+  border-color: #344fd6;
+}
+
+.wrong.radio-label:has(.radio-input:checked) {
+  background-color: #F8BCBC;
+}
+
+.correct.radio-label:has(.radio-input:checked) {
+  background-color: #94D7A2;
+}
+
+.unguessed {
+  background-color: #F5F7FB;
+  border-color: #4D5B9E;
+  color: #4D5B9E
+}
+
+.submit-button {
+  margin-bottom: 1rem;
+
+}
+
